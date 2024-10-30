@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Quiz</title>
+    <script>
+        function getCheckedValues(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+            alert('You selected: ' + selectedValues.join(', '));
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form-quiz" onsubmit="getCheckedValues(event);">
+        <section id="question1">
+            <h3>When is the tradition of Halloween celebrated every year in the USA?</h3>
+            <label>
+                <input type="checkbox" value="October 31"> October 31
+            </label><br>
+            <label>
+                <input type="checkbox" value="November 1"> November 1
+            </label><br>
+            <label>
+                <input type="checkbox" value="December 25"> December 25
+            </label><br>
+            <label>
+                <input type="checkbox" value="January 1"> January 1
+            </label>
+        </section>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

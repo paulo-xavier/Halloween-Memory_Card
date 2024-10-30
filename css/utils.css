@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*
+Header font: "Rubik Wet Paint", system-ui;
+General fonts: Rubik, sans-serif;
+*/
+
+
+:root{
+    --dark-blue: #242B40;
+    --orange: #E6812F;
+    --button-color: #30445C;
+    --white-color: #FFF;
+    --black-color: #000;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Playwrite+IT+Moderna:wght@100..400&family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+

@@ -1,0 +1,69 @@
+Question 1: What is the name of the killer on Friday the 13th?
+
+Alternative 1: Pamela Vorhess <----------------
+Alternative 2: Jason Vorhess
+Alternative 3: Michael Myers
+Alternative 4: Charles Lee Ray
+
+Question 2: In The Shining, what phrase does Jack Nicholson famously type?
+
+Alternative 1: "All work and no play makes Jack a dull boy." <----------------
+Alternative 2: "Here's Johnny!"
+Alternative 3: "Redrum."
+Alternative 4: "I love you."
+
+Question 3: Which movie features a haunted doll named Annabelle?
+
+Alternative 1: The Conjuring <----------------
+Alternative 2: Child's Play
+Alternative 3: Insidious
+Alternative 4: The Nun
+
+Question 4: What supernatural entity haunts the family in Poltergeist?
+
+Alternative 1: Ghosts
+Alternative 2: Demons
+Alternative 3: Spirits
+Alternative 4: Poltergeists <----------------
+
+Question 5: In A Nightmare on Elm Street, what is the name of the killer who attacks teenagers in their dreams?
+
+Alternative 1: Jason Voorhees
+Alternative 2: Freddy Krueger <----------------
+Alternative 3: Michael Myers
+Alternative 4: Chucky
+
+Question 6: What is the setting for the movie The Blair Witch Project?
+
+Alternative 1: A haunted house
+Alternative 2: An abandoned asylum
+Alternative 3: A forest <----------------
+Alternative 4: A deserted island
+
+Question 7: In Scream, what is the name of the killer's iconic mask?
+
+Alternative 1: The Ghostface mask <----------------
+Alternative 2: The Michael Myers mask
+Alternative 3: The Jason mask
+Alternative 4: The Leatherface mask
+
+Question 8: Which horror movie features a cursed videotape?
+
+Alternative 1: The Ring <----------------
+Alternative 2: It Follows
+Alternative 3: Final Destination
+Alternative 4: Sinister
+
+Question 9: What is the primary fear that It preys upon?
+
+Alternative 1: Heights
+Alternative 2: Clowns <----------------
+Alternative 3: Darkness
+Alternative 4: Open water
+
+Question 10: In Get Out, what is the primary method used to control the victims?
+
+Alternative 1: Hypnosis 
+Alternative 2: Brain surgery <----------------
+Alternative 3: Mind control drugs
+Alternative 4: Psychological manipulation
