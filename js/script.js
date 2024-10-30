@@ -10,6 +10,16 @@ let cardsImage = [
     "./images/scarecrow.avif", "./images/scarecrow.avif"
 ];
 
+let jumpsCareImage = [
+    "./images/jumpscare1.png",
+    "./images/jumpscare2.gif",
+    "./images/jumpscare3.jpg",
+    "./images/jumpscare4.jpg",
+    "./images/jumpscare5.gif",
+    "./images/jumpscare6.gif",
+    "./images/jumpscare7.webp",
+]
+
 // Cada carta terá um eventListener caso elas forem clicadas e trará o index delas.
 document.querySelectorAll('.card').forEach((card, index) => {
     card.addEventListener('click', () => {
