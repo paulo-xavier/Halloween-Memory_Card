@@ -35,3 +35,8 @@ document.getElementById('form-quiz').addEventListener('submit', function (e) {
 
     alert(`Score: ${totalScore}/10\n\n${resultMessage}`); // exibe a pontuação total e as mensagens de resultado
 });
+
+// Descrição: Os jogadores precisam encontrar pares de cartas com imagens ou palavras de Halloween.
+// CRUD: O sistema permite adicionar, editar e remover cartas no conjunto de memória.
+// Complexidade: Moderada. Exige um pouco mais de lógica para implementar o embaralhamento e o pareamento das cartas, mas ainda é gerenciável com JavaScript.
+//https://www.youtube.com/watch?v=0SeqdHCBYVo
