@@ -76,16 +76,32 @@ function addImageCard(id) {
     `;
 }
 
+// Função para entrar no modo tela cheia
+function goFullScreen() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari e Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
+
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
-function getJumpscare(a, b){
-    time=getRandomInt(a, b);
+function getJumpscare(a, b) {
+    time = getRandomInt(a, b);
     setTimeout(() => {
-        alert('BU!');
+        goFullScreen();
+        const html = document.getElementsByTagName(html);
+        html.classList.remove('visible');
     }, time);
 }
 
