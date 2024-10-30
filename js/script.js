@@ -3,21 +3,21 @@ let card2 = null; // Armazena a segunda carta virada
 let cardsFlippedIndex = [];
 let cardsImage = [
     "./images/skeleton.jpg", "./images/skeleton.jpg",
-    "./images/witch.avif", "./images/witch.avif",
-    "./images/zombie.avif", "./images/zombie.avif",
-    "./images/spider.png", "./images/spider.png",
-    "./images/pumpkin.webp", "./images/pumpkin.webp",
-    "./images/scarecrow.avif", "./images/scarecrow.avif"
+    "./images/witch.jpg", "./images/witch.jpg",
+    "./images/zombie.jpg", "./images/zombie.jpg",
+    "./images/spider.jpg", "./images/spider.jpg",
+    "./images/pumpkin.jpg", "./images/pumpkin.jpg",
+    "./images/scarecrow.jpg", "./images/scarecrow.jpg"
 ];
 
 let jumpsCareImage = [
-    "./images/jumpscare1.png",
+    "./images/jumpscare1.jpg",
     "./images/jumpscare2.gif",
     "./images/jumpscare3.jpg",
     "./images/jumpscare4.jpg",
     "./images/jumpscare5.gif",
     "./images/jumpscare6.gif",
-    "./images/jumpscare7.webp",
+    "./images/jumpscare7.jpg",
 ]
 
 // Cada carta terá um eventListener caso elas forem clicadas e trará o index delas.
@@ -63,6 +63,7 @@ function checkIsMatch() {
     } else {
         setTimeout(() => {
             alert('Combinação errada!');
+            getJumpscare(2000, 5000);
             flipBack(); // Desvirar cartas após um tempo
         }, 1000);
     }
@@ -73,6 +74,19 @@ function addImageCard(id) {
     document.getElementById(`card${id}`).innerHTML = `
         <img src="${cardsImage[id]}" alt="Card Image" class="${getCardClass(cardsImage[id])}">
     `;
+}
+
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
+
+function getJumpscare(a, b){
+    time=getRandomInt(a, b);
+    setTimeout(() => {
+        alert('BU!');
+    }, time);
 }
 
 // Função para determinar a classe da imagem
@@ -89,12 +103,12 @@ function getCardClass(imageSrc) {
 function flipBack() {
     if (card1 !== null) {
         document.getElementById(`card${card1}`).innerHTML = `
-            <img src="./images/image-background.webp" alt="">
+            <img src="./images/image-background.jpg" alt="">
         `;
     }
     if (card2 !== null) {
         document.getElementById(`card${card2}`).innerHTML = `
-            <img src="./images/image-background.webp" alt="">
+            <img src="./images/image-background.jpg" alt="">
         `;
     }
     resetCards();
@@ -109,5 +123,7 @@ function resetCards() {
 function checkGameEnd() {
     if (cardsFlippedIndex.length === cardsImage.length) {
         alert('Parabéns! Você concluiu o jogo.');
+        getJumpscare(2000, 30000);
     }
 }
+
