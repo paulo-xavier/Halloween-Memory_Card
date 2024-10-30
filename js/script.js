@@ -48,7 +48,122 @@
 
 
 
-const card1 = 0; //Store the first card flipped
-const card2 = 0; //Store the first card flipped
+let card1 = null; //Armeza a primeira carta virada
+let card2 = null; //Armazena a segunda carta virada
+
+const cardsFlippedIndex = [];
 
 
+let cardsImage = [
+    "../images/skeleton.jpg",
+    "../images/skeleton.jpg", 
+    "../images/witch.avif",
+    "../images/witch.avif",
+    "../images/zombie.avif", 
+    "../images/zombie.avif", 
+    "../images/spider.png" ,
+    "../images/spider.png", 
+    "../images/pumpkin.webp", 
+    "../images/pumpkin.webp",
+    "../images/scarecrow.avif", 
+    "../images/scarecrow.avif"
+    
+]
+
+
+// Cada carta terá um eventListener caso elas forem clicadas e trará o index delas.
+
+document.querySelectorAll('.card').forEach((card, index) => {
+    
+    card.addEventListener('click', () => {
+        
+        isCardFlipped(index); // (1) pegar o ID da carta
+
+    });
+});
+
+
+
+
+
+
+// (1) pegar o ID da carta
+
+// (2) Verificar se atualmente já existem 2 cartas viradas. 
+    // Se sim, desvirá=las e virar a atual;
+
+
+// (3) Caso não haja, verificar quais das duas tentativas estão sendo usadas e atribui-la para ela.
+    // Se usuário utiliza a segudna tentativa, verificar se ele acertou a combinação
+
+// (4) Próxima tentativa
+
+
+
+
+const isCardFlipped = (id) => {
+
+    // console.log(id)
+
+    twoCardsFlipped(id); // (2) Verificar se atualmente já existem 2 cartas viradas. 
+
+
+ 
+}
+
+
+function  twoCardsFlipped (id) {
+
+    // (3) Caso não haja, verificar quais das duas tentativas estão sendo usadas e atribui-la para ela.
+
+    if (card1 === null){
+        
+        card1 = id;
+
+        addImageCard(card1) //Alterar a imagem no HTML
+
+        return;
+
+    
+    } else {
+        
+        card2 = id;
+
+        addImageCard(card2) // Alterar a imagem no HTML
+
+        checkIsMatch() // Se usuário utiliza a segudna tentativa, verificar se ele acertou a combinação
+
+    } 
+
+}
+
+
+//Função para verificar se duas cartas são iguais
+
+function checkIsMatch() {
+    
+    const cardOne = document.getElementById(`card${card1}`);
+    const cardTwo = document.getElementById(`card${card2}`);
+
+    if (cardOne.classList === cardTwo.classList) {
+        alert('Ambas as cartas são iguais!!')
+    }
+}
+
+
+
+//Função responsável por alterar a imagem do cartão no HTML
+
+function addImageCard(id) {
+
+    document.getElementById(`card${id}`).innerHTML = `
+        <img src="${cardsImage[id]}" alt="Card Image">
+    `;
+}
+
+
+
+
+function flip() {
+    // Lógica para desvirar as duas cartas viradas  
+}
