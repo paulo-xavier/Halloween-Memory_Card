@@ -1,6 +1,4 @@
 html.visible{
-    
-    
     background-image: url('../images/jumpscare1.png');
     z-index: 10;
     background-repeat: no-repeat;
@@ -8,14 +6,11 @@ html.visible{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    
 }
 
 head.removed, body.removed{
     display: none;
 }
- 
 
 
 body {
