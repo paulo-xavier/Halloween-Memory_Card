@@ -24,20 +24,6 @@ header {
 }
 
 
-h1 {
-    font-size: 2.5em;
-        font-family: "Rubik Wet Paint", system-ui;
-
-}
-
-h2 {
-    font-family: 'Creepster';
-    font-size: 1.8em;
-}
-
-h3 {
-    color: white;
-}
 
 main {
     font-family: 'Rubik', sans-serif;
@@ -49,13 +35,6 @@ main {
 }
 
 
-form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
-    align-items: center;
-}
 
 
 section{
@@ -68,57 +47,4 @@ section{
     gap: 20px;
     border-radius: 10px;
     border: 3px solid black;
-}
-
-
-input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    letter-spacing: 10px;
-}
-
-label {    
-    background-color: white;
-    box-shadow: 3px 3px black;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    gap: 4px;
-}
-
-input[type="radio"]:checked {
-    background-color: var(--orange);
-    
-}
-
-input[type="submit"] {
-    font-family: 'Creepster', sans-serif;
-    margin: 40px auto;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    border-radius: 10px;
-    border: none;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    background-color: var(--orange);
-    transition: all .3s;
-    cursor: pointer;
-}
-
-input[type='submit']:hover {
-    background-color: rgb(126, 74, 11);
-}
-
-
-footer {
-    margin: 40px;
 }
