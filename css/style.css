@@ -8,14 +8,11 @@ html.visible{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    
 }
 
 head.removed, body.removed{
     display: none;
 }
- 
 
 
 body {
@@ -43,6 +40,10 @@ header {
     text-shadow: 4px 4px black;
 }
 
+h1 {
+    font-size: 2.5em;
+    font-family: "Rubik Wet Paint", system-ui;
+}
 
 
 main {
