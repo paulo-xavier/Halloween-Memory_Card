@@ -20,6 +20,12 @@ let jumpsCareImage = [
     "./images/jumpscare7.jpg",
 ]
 
+let tracks = [
+    "./audio/audio1.mp3",
+    "./audio/audio2.mp3",
+    "./audio/audio3.mp3",
+]
+
 // Cada carta terá um eventListener caso elas forem clicadas e trará o index delas.
 document.querySelectorAll('.card').forEach((card, index) => {
     card.addEventListener('click', () => {
@@ -56,13 +62,11 @@ function checkIsMatch() {
     const cardOne = document.getElementById(`card${card1}`);
     const cardTwo = document.getElementById(`card${card2}`);
     if (cardOne.querySelector('img').classList.value === cardTwo.querySelector('img').classList.value) {
-        alert('Combinação encontrada!');
         cardsFlippedIndex.push(card1, card2); // Armazenar índices das cartas combinadas corretamente
         resetCards();
         checkGameEnd(); // Verificar se todas as cartas foram combinadas
     } else {
         setTimeout(() => {
-            alert('Combinação errada!');
             getJumpscare(2000, 5000);
             flipBack(); // Desvirar cartas após um tempo
         }, 1000);
@@ -96,26 +100,53 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
-function getJumpscare(a, b) {
-    time = getRandomInt(a, b);
-    alert('0');
+// function setJumpscareBackground() {
+//     id = getRandomInt(1, 7);
+//     backgrounds = document.getElementById('audio-jumpscare');
+//     backgrounds.src = tracks[id];
+//     return player.play();
+
+// }
+
+// function playNext() {
+//     var track = tracks[Math.floor(Math.random() * tracks.length)];
+  
+//     _player.src = track;
+//     return _player.play();
+//   }
+
+// function addImageCard(id) {
+//     document.getElementById(`card${id}`).innerHTML = `
+//         <img src="${cardsImage[id]}" alt="Card Image" class="${getCardClass(cardsImage[id])}">
+//     `;
+// }
+
+function setJumpscareSound() {
+    id = getRandomInt(1, 3);
+    player = document.getElementById('audio-jumpscare');
+    player.src = tracks[id];
+    return player.play();
+}
+
+function getJumpscare() {
     setTimeout(() => {
         goFullScreen();
-        const html = document.getElementById
-        const body = document.getElementsByTagName(body);
-        html.classList.remove('visible');
-        body.classList.remove('visible');
-        html.classList.add('removed');
+        const head = document.getElementById('head');
+        const html = document.getElementsByTagName('html')[0];
+        const body = document.getElementById('body');
+        html.classList.add('visible');
+        head.classList.add('removed');
         body.classList.add('removed');
-        alert('1');
+        // setJumpscareBackground();
+        setJumpscareSound();
+
         setTimeout(() => {
-            html.classList.remove('removed');
+            html.classList.remove('visible');
+            head.classList.remove('removed');
             body.classList.remove('removed');
-            html.classList.add('visible');
-            body.classList.add('visible');
-            alert('2');
-        }, 6000);
-    }, time);
+            document.exitFullscreen();
+        }, 3000);
+    }, 1000);
 }
 
 // Função para determinar a classe da imagem
@@ -152,7 +183,7 @@ function resetCards() {
 function checkGameEnd() {
     if (cardsFlippedIndex.length === cardsImage.length) {
         alert('Parabéns! Você concluiu o jogo.');
-        getJumpscare(2000, 30000);
+        getJumpscare();
     }
 }
 
