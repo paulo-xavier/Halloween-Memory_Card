@@ -9,22 +9,48 @@ let cardsImage = [
     "./images/pumpkin.jpg", "./images/pumpkin.jpg",
     "./images/scarecrow.jpg", "./images/scarecrow.jpg"
 ];
-
 let jumpsCareImage = [
-    "./images/jumpscare1.jpg",
+    "./images/jumpscare1.gif",
     "./images/jumpscare2.gif",
-    "./images/jumpscare3.jpg",
+    "./images/jumpscare3.gif",
     "./images/jumpscare4.jpg",
     "./images/jumpscare5.gif",
     "./images/jumpscare6.gif",
-    "./images/jumpscare7.jpg",
-]
-
+    "./images/jumpscare7.jpg"
+];
 let tracks = [
     "./audio/audio1.mp3",
     "./audio/audio2.mp3",
-    "./audio/audio3.mp3",
-]
+    "./audio/audio3.mp3"
+];
+
+// pré-carregar as imagens de jumpscare
+function preloadJumpscareImages() {
+    jumpsCareImage.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// função para embaralhar um array usando o método Fisher-Yates
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Embaralhar as imagens das cartas ao carregar a página
+window.onload = function() {
+    preloadJumpscareImages(); // pre-carregar as imagens de jumpscare
+    shuffle(cardsImage); // Embaralhar o array de imagens
+    // Atualizar as cartas no HTML com as imagens embaralhadas
+    document.querySelectorAll('.card').forEach((card, index) => {
+        card.innerHTML = `<img src="./images/image-background.jpg" alt="Card Image" class="${getCardClass(cardsImage[index])}">`;
+    });
+}
+
 
 // Cada carta terá um eventListener caso elas forem clicadas e trará o index delas.
 document.querySelectorAll('.card').forEach((card, index) => {
@@ -100,32 +126,27 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
-// function setJumpscareBackground() {
-//     id = getRandomInt(1, 7);
-//     backgrounds = document.getElementById('audio-jumpscare');
-//     backgrounds.src = tracks[id];
-//     return player.play();
+function removeJumpscareBackground() {
+    const backgroundElement = document.querySelector('html');
+    if (backgroundElement) {
+        backgroundElement.style.backgroundImage = 'none';
+    }
+}
 
-// }
-
-// function playNext() {
-//     var track = tracks[Math.floor(Math.random() * tracks.length)];
-  
-//     _player.src = track;
-//     return _player.play();
-//   }
-
-// function addImageCard(id) {
-//     document.getElementById(`card${id}`).innerHTML = `
-//         <img src="${cardsImage[id]}" alt="Card Image" class="${getCardClass(cardsImage[id])}">
-//     `;
-// }
+function setJumpscareBackground() {
+    const id = getRandomInt(0, jumpsCareImage.length-1); // ajuste para indexação correta
+    const image = jumpsCareImage[id];
+    const backgroundElement = document.querySelector('html.visible');
+    if (backgroundElement) { // serve para verificar se existe a classe "visible" na tag html
+        backgroundElement.style.backgroundImage = `url(${image})`;
+    }
+}
 
 function setJumpscareSound() {
-    id = getRandomInt(1, 3);
-    player = document.getElementById('audio-jumpscare');
+    const id = getRandomInt(0, tracks.length-1);
+    const player = document.getElementById('audio-jumpscare');
     player.src = tracks[id];
-    return player.play();
+    player.play();
 }
 
 function getJumpscare() {
@@ -137,15 +158,15 @@ function getJumpscare() {
         html.classList.add('visible');
         head.classList.add('removed');
         body.classList.add('removed');
-        // setJumpscareBackground();
+        setJumpscareBackground();
         setJumpscareSound();
-
         setTimeout(() => {
             html.classList.remove('visible');
             head.classList.remove('removed');
             body.classList.remove('removed');
             document.exitFullscreen();
-        }, 3000);
+            removeJumpscareBackground();
+        }, 1800);
     }, 1000);
 }
 
@@ -186,4 +207,3 @@ function checkGameEnd() {
         getJumpscare();
     }
 }
-

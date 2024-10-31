@@ -1,7 +1,5 @@
 html.visible{
-    
-    
-    background-image: url('../images/jumpscare1.jpg');
+    background-image: none;
     z-index: 10;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,6 +36,7 @@ header {
     color: var(--orange);
     letter-spacing: 3px;
     text-shadow: 4px 4px black;
+    margin-bottom: 3%;
 }
 
 h1 {
