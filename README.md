@@ -9,7 +9,7 @@ This project was developed using **HTML**, **CSS**, and **JavaScript** to create
 ### Features
 - **Halloween-Themed Cards**: Each card contains a unique Halloween element, adding to the spooky atmosphere.
 - **Jump Scares**: Selecting incorrect cards may trigger surprises, adding an extra thrill to the game.
-- **Random images generating**: The game automatically shuffles the cards sequence each time the page is reloaded.
+- **Random card shuffling**: The game automatically shuffles the cards sequence each time the page is reloaded.
 
 ### How to Play
 1. Click to flip two cards.
