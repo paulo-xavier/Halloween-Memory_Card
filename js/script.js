@@ -98,10 +98,23 @@ function getRandomInt(min, max) {
 
 function getJumpscare(a, b) {
     time = getRandomInt(a, b);
+    alert('0');
     setTimeout(() => {
         goFullScreen();
-        const html = document.getElementsByTagName(html);
+        const html = document.getElementById
+        const body = document.getElementsByTagName(body);
         html.classList.remove('visible');
+        body.classList.remove('visible');
+        html.classList.add('removed');
+        body.classList.add('removed');
+        alert('1');
+        setTimeout(() => {
+            html.classList.remove('removed');
+            body.classList.remove('removed');
+            html.classList.add('visible');
+            body.classList.add('visible');
+            alert('2');
+        }, 6000);
     }, time);
 }
 
