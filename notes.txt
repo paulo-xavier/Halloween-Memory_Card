@@ -1,0 +1,42 @@
+
+-----> TIME
+
+30 seconds
+	- 200 points
+
+1 minute 
+	- 100 points
+
+2 minutes
+	- 50 points
+
+4 minutes 
+	- 25 points
+
+
+more than 4 minutes
+	- 10 
+
+
+
+
+------> PENALTIES FOR INCORRECT MATCHES
+
+	- Wrong match = -5 points
+
+
+RANK
+
+
+History 
+
+- Input for username on the last page
+- Game match
+- Matches history
+- Delete history
+- Update username
+
+
+
+
+

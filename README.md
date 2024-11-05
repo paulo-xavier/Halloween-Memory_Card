@@ -17,6 +17,19 @@ This project was developed using **HTML**, **CSS**, and **JavaScript** to create
 2. Match all pairs to win the game.
 3. Beware of the spooky surprises if you flip the wrong cards!
 
+### Unified Modeling Language Diagram
+
+```mermaid
+erDiagram
+    
+    game {
+        INT id_game
+        DATE date_game
+        VARCHAR(50) player_name
+        TIME time_match
+        INT score_game
+    }
+```
 
 ![Game Screenshot](./images/screenshot.png)
 
