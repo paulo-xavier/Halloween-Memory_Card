@@ -1,5 +1,4 @@
-
------> TIME
+----> TIME <----
 
 30 seconds
 	- 200 points
@@ -35,8 +34,3 @@ History
 - Matches history
 - Delete history
 - Update username
-
-
-
-
-
