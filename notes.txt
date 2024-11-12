@@ -34,3 +34,10 @@ History
 - Matches history
 - Delete history
 - Update username
+
+
+Rotas para:
+1- (CREATE)- Inserir dados no banco de dados da tabela 'game';
+2- (READ) Capturar as informações da tabela 'game';
+3- (UPDATE) Inserir ID e novo nome para dar UPDATE renomear o nome do jogador atual;
+4- (DELETE) Deletar uma tabela de dados tipo 'game' a partir do ID;
