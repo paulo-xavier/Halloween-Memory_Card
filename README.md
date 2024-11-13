@@ -26,6 +26,7 @@ erDiagram
         INT id_game
         DATE date_game
         VARCHAR(50) player_name
+        VARCHAR(1000) url_image 
         TIME time_match
         INT score_game
     }
