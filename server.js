@@ -80,9 +80,9 @@ app.delete("/game", (req, res) => {
 // (1)- (CREATE)- Inserir dados no banco de dados da tabela 'game';
 app.post("/game", async (req, res) => {
   const { date_game, player_name, time_match, url_image, score_game } = req.body;
-  if (!date_game || !player_name || time_match || url_image || score_game ) {
+  if (!date_game || !player_name || !time_match || !url_image || !score_game ) {
     return res.status(400).json({ message: "Error! Insert attempt with non-integer data detected!" });
-  }
+  }  
   db.query(
     "INSERT INTO game (date_game, player_name, time_match, url_image, score_game) VALUES (?, ?, ?, ?, ?)",
     [date_game, player_name, time_match, url_image, score_game],
