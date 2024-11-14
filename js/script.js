@@ -53,7 +53,7 @@ function setTimeMatch() {
 }
 
 function addPenalty() {
-  if (score < 0) return;
+  if (score < 0) return score=0;
   else {
     score -= 5; // subtrai 5 pontos do score
     erros++; // incrementa o numero de erros
