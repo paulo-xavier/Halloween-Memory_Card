@@ -1,5 +1,7 @@
 # Halloween Memory Card Game 🎃👻
 
+<b>Authors: Matheus Henrique, Paulo Xavier, Róger Gustavo and Guilherme Rodrigues.</b>
+
 Welcome to our Halloween-themed Memory Card Game, a spooky twist on the classic card-matching game! This game challenges players to match Halloween-themed cards, but beware: selecting the wrong cards might trigger some  jump scares.
 
 ## Project Overview
