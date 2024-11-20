@@ -1,4 +1,4 @@
-# Halloween Memory Card Game 🎃👻
+# Halloween Memory Game 🎃👻
 
 <b>Authors: Matheus Henrique, Paulo Xavier, Róger Gustavo and Guilherme Rodrigues.</b>
 
