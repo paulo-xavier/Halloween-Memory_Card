@@ -25,7 +25,7 @@ This project was developed using **HTML**, **CSS**, and **JavaScript** to create
 erDiagram
     
     game {
-        INT id_game
+        INT id_game PK
         DATE date_game
         VARCHAR(50) player_name
         VARCHAR(1000) url_image 
